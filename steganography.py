@@ -40,7 +40,7 @@ def encode_image(path_to_image, text_to_write):
                 b = format(p, "b")[:-1] + "1"
                 d = int(b,2)
                 red.putpixel((x, y), d)
-            elif (txt.getpixel != 255) and (red.getpixel((x,y)) & 1): #incase there is white already in the base image
+            elif red.getpixel((x,y)) & 1: #incase there is white already in the base image
                 p = red.getpixel((x, y))
                 b = format(p, "b")[:-1] + "0"
                 d = int(b,2)
